@@ -2,11 +2,9 @@
 
 $field_longitude = 'longlat_longitude';
 $field_latitude = 'longlat_latitude';
-
-wp_nonce_field( 'longlat_meta_box_action', 'longlat_meta_box_nonce' );
-
 $value_longitude = isset( $post->ID ) && !is_null( $post->ID ) ? get_post_meta( $post->ID, $field_longitude, true ) : "";
 $value_latitude = isset( $post->ID ) && !is_null( $post->ID ) ? get_post_meta( $post->ID, $field_latitude, true ) : "";
+wp_nonce_field( 'longlat_meta_box_action', 'longlat_meta_box_nonce' );
 
 ?>
 
@@ -14,7 +12,7 @@ $value_latitude = isset( $post->ID ) && !is_null( $post->ID ) ? get_post_meta( $
     <tr>
         <td>
             <label for="<?= $field_longitude; ?>">
-                <?php _e( 'longitude', 'textdomain' ); ?>
+                <?php _e( 'Longitude', 'textdomain' ); ?>
             </label>
         </td>
         <td>
@@ -25,7 +23,7 @@ $value_latitude = isset( $post->ID ) && !is_null( $post->ID ) ? get_post_meta( $
     <tr>
         <td>
             <label for="<?= $field_latitude; ?>">
-                <?php _e( 'latitude', 'textdomain' ); ?>
+                <?php _e( 'Latitude', 'textdomain' ); ?>
             </label>
         </td>
         <td>

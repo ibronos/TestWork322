@@ -14,6 +14,7 @@ if ( ! class_exists( 'Storefront_Cpt_City' ) ) :
 
         public function __construct() {
 			add_action( 'init', array( $this, 'reg_cpt_city' ) );
+            add_filter('enter_title_here', array( $this,'city_title_placeholder'), 10, 2);
 		}
 
         function reg_cpt_city() {
@@ -30,10 +31,20 @@ if ( ! class_exists( 'Storefront_Cpt_City' ) ) :
                         'view_item'          => __( 'View Cities' ),
                         'search_items'       => __( 'Search Cities' )
                     ),
-                    'public'      => true,
-                    'has_archive' => true,
+                    'public'        => true,
+                    'has_archive'   => true,
+                    'supports'      => array( 'title' )
                 )
             );
+        }
+
+        //Replace title placeholder of 'city' CPT
+        function city_title_placeholder($placeholder, $post) {
+            if ($post->post_type === 'city') {
+                return 'Enter city name';
+            }
+        
+            return $placeholder;
         }
 
     }

@@ -1,7 +1,7 @@
 <?php
 /**
  * Taxonomy: Country
- * Parent: City
+ * CPT Parent: City
  * Registers the 'country' taxonomy.
  */
 
@@ -49,6 +49,11 @@ if ( ! class_exists( 'Storefront_Tax_Country' ) ) :
                 'show_admin_column' => true,
                 'query_var'         => true,
                 'rewrite'           => ['slug' => 'country'],
+                'default_term' => [ 
+                    'name' => 'Uncategorized', 
+                    'slug' => 'ucategorized', 
+                    'description' => '',
+                ],
             ];
 
             register_taxonomy('country', ['city'], $args);

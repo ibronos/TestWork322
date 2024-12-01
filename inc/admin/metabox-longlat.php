@@ -23,7 +23,7 @@ if ( ! class_exists( 'Metabox_Longlat' ) ) :
             if ( in_array( $post_type, $post_types ) ) {
                 add_meta_box(
                     'longlat'
-                    ,__( 'Longitude Latitude', 'textdomain' )
+                    ,__( 'Location Coordinate', 'textdomain' )
                     ,array( $this, 'render_metabox' )
                     ,$post_type
                     ,'advanced'

@@ -1,0 +1,17 @@
+table {
+    background-color: darkgray;
+    width: 80%;
+}
+
+table tr,
+table td,
+table th
+{
+    border: 1px solid gray;
+    text-align: center;
+    background-color: white;
+}
+
+.city-search {
+    padding-top: 20px;
+}

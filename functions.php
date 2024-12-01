@@ -1,6 +1,12 @@
 <?php
 
 /**
+ * Set environment variables
+ */
+define('OWM_KEY', 'cd5f684e82d30fb387aa0ff1a6282bc6');
+
+
+/**
  * Autoload files in 'inc' sub directory
  */
 function autoload_inc_files() {
