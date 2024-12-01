@@ -51,7 +51,7 @@ if ( ! class_exists( 'Storefront_Tax_Country' ) ) :
                 'rewrite'           => ['slug' => 'country'],
                 'default_term' => [ 
                     'name' => 'Uncategorized', 
-                    'slug' => 'ucategorized', 
+                    'slug' => 'uncategorized', 
                     'description' => '',
                 ],
             ];
